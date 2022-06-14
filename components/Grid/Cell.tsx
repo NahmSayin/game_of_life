@@ -7,7 +7,7 @@ interface CellProps {
   index: number
 }
 
-interface CallBackFunction {
+export interface CallBackFunction {
     (index: number,
     newValue: boolean): void
 }
@@ -17,10 +17,9 @@ export const Cell = ({isActive, callBack, index}: CellProps) => {
   function toggleState() {
     const newValue = !isActive
     callBack(index,newValue)
-}
+  }
 
   return (
-    <div className={isActive ? Styles.activeBox : Styles.box} onClick={toggleState}>
-    </div>
+    <div className={isActive ? Styles.activeBox : Styles.box} onClick={toggleState} />
   )
 }
