@@ -18,11 +18,16 @@ export const GameOfLife = () => {
     setItems(randomGrid)
   }
 
+  function clearGrid(){
+    setItems(Array<boolean>(625).fill(false))
+  }
+ 
   return (
     <div className={Styles.body}>
       <div className={Styles.example}>GameOfLife</div>
       <Grid grid={items} callBack={changeState}/>
       <button onClick={skipGeneration}> Click </button>
+      <button onClick={clearGrid}> Reset </button>
     </div>
   )
 }
