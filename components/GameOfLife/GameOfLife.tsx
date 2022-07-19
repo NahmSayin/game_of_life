@@ -3,7 +3,6 @@ import Styles from './GameOfLife.module.css';
 import { Grid } from '../Grid'
 import { gameOfLifeNextIteration } from './GameOfLifeRules';
 
-
 export const GameOfLife = () => {
   const [items, setItems] = useState(Array<boolean>(625).fill(false))
 
@@ -25,6 +24,8 @@ export const GameOfLife = () => {
   return (
     <div className={Styles.body}>
       <div className={Styles.example}>GameOfLife</div>
+      <p>Make a pattern in the grid and press click to generate each iteration of the game of life!</p>
+      <p>(Scroll down for buttons)</p>
       <Grid grid={items} callBack={changeState}/>
       <button onClick={skipGeneration}> Click </button>
       <button onClick={clearGrid}> Reset </button>

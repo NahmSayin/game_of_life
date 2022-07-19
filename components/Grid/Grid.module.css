@@ -16,7 +16,7 @@
 }
   
 .wrapper {
-    width: 600px;
+    width: 100%;
     display: grid;
     grid-gap: 1px;
     grid-template-columns: repeat(25, 30px);
@@ -24,4 +24,5 @@
     grid-auto-flow: column;
     margin: auto;
     padding: 10px;
+    text-align: center;
   }
